@@ -1,0 +1,36 @@
+/*!
+ * @he-tree/dnd-utils v0.1.0-alpha.4
+ * Author: phphe <phphe@outlook.com> (https://github.com/phphe)
+ * Homepage: null
+ * Released under the MIT License.
+ */
+
+/*!
+ * @he-tree/tree-utils v0.1.0-alpha.4
+ * Author: phphe <phphe@outlook.com> (https://github.com/phphe)
+ * Homepage: null
+ * Released under the MIT License.
+ */
+
+/*!
+ * @he-tree/vue v2.8.1
+ * Author: phphe <phphe@outlook.com> (https://github.com/phphe)
+ * Homepage: https://hetree.phphe.com/
+ * Released under the MIT License.
+ */
+
+/*!
+ * @virtual-list/vue
+ * Author: phphe <phphe@outlook.com> (https://github.com/phphe)
+ * Homepage: https://virtual-list.phphe.com
+ * Released under the MIT License.
+ */
+
+/*!
+ * drag-event-service v2.0.0
+ * Author: phphe <phphe@outlook.com> (https://github.com/phphe)
+ * Homepage: null
+ * Released under the MIT License.
+ */
+
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
