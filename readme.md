@@ -8,7 +8,7 @@ The model must have columns `parent_id` and `order`, both type int.
 
 ## Installation
 Start with installing the package
-`composer require krendil101/ModelTree`
+`composer require krendil/model-tree`
 
 Then register the tool inside the `NovaServiceProvider.php`
 

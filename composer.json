@@ -1,6 +1,6 @@
 {
     "name": "krendil/model-tree",
-    "description": "A Laravel Nova tool.",
+    "description": "Laravel Nova ModelTree tool. Simple package for manage tree models",
     "keywords": [
         "laravel",
         "nova"
