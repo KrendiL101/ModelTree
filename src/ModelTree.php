@@ -59,7 +59,6 @@ class ModelTree extends Tool
             return '/model-tree/' . $this->resource::uriKey();
         }
 
-
         return '/model-tree';
     }
 }

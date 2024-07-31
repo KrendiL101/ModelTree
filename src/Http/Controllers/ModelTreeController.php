@@ -23,14 +23,12 @@ class ModelTreeController
 
     public function store(CreateResourceRequest $request): JsonResponse
     {
-        $model = $request->model();
-
         $tree = $request->post('tree');
 
         DB::beginTransaction();
 
         try {
-            $this->saveTree($tree, $model);
+            $this->saveTree($tree, $request);
 
             DB::commit();
         } catch (\Throwable $e) {
@@ -57,7 +55,7 @@ class ModelTreeController
 
     protected function getModelCollection(CreateResourceRequest $request, int|null $parentId = null): Collection
     {
-        $builder = $request->model()->orderBy('order', 'asc');
+        $builder = $request->model()->newModelQuery()->orderBy('order', 'asc');
 
         if ($parentId) {
             $builder->where('parent_id', $parentId);
@@ -69,21 +67,21 @@ class ModelTreeController
         return $builder->get();
     }
 
-    protected function saveTree(array $tree, Model $model, int|null $parentId = null): void
+    protected function saveTree(array $tree, CreateResourceRequest $request, int|null $parentId = null): void
     {
         $order = 1;
 
         foreach ($tree as $leaf) {
             /** @var Model $_model */
-            $_model = $model->findOrFail($leaf['id']);
+            $model = $request->model()->newModelQuery()->findOrFail($leaf['id']);
 
-            $_model->update([
+            $model->update([
                 'order' => $order++,
                 'parent_id' => $parentId,
             ]);
 
             if ($children = $leaf['children'] ?? []) {
-                $this->saveTree($children, $model, $_model->getKey());
+                $this->saveTree($children, $request, $model->getKey());
             }
         }
     }
