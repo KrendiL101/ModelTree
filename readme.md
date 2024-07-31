@@ -3,6 +3,8 @@
 
 Support Nova 4
 
+![screenshot.png](screenshot.png)
+
 ## Requirements
 The model must have columns `parent_id` and `order`, both type int.
 
