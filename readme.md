@@ -24,7 +24,7 @@ public function tools()
 Add to menu, in the `resource()` method, insert your resource model
 
 ```php
-(new Krendil101\ModelTree\ModelTree)
+(new Krendil\ModelTree\ModelTree)
     ->resource(Category::class)
     ->menu($request)
 ```
