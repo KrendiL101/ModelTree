@@ -3,11 +3,20 @@
     "description": "Laravel Nova ModelTree tool. Simple package for manage tree models",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "tree"
+    ],
+    "authors": [
+        {
+            "name": "Serhii Goncharenko",
+            "email": "krendil007@gmail.com",
+            "role": "Developer"
+        }
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0"
+        "php": "^7.3|^8.0",
+        "laravel/nova": "^4.0"
     },
     "autoload": {
         "psr-4": {
